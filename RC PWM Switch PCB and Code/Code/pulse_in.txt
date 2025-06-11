@@ -1,0 +1,17 @@
+
+int pin = 7;
+unsigned long number;
+
+void setup()
+{
+  pinMode(pin, INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  number = pulseIn(pin, HIGH);
+  Serial.println(number);
+  delay(10);
+}
+

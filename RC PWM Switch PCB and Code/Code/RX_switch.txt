@@ -1,0 +1,31 @@
+// Code by HavocRC.
+//   AJ Robinson
+
+
+int RXin = 2;
+int AUXout = 1;
+
+unsigned long number;
+int signal = 0;
+
+void setup()
+{
+  pinMode(RXin, INPUT);
+  pinMode(AUXout, OUTPUT);
+}
+
+void loop()
+{
+  number = pulseIn(RXin, HIGH);
+  
+  if (number > 1500)
+   {
+     digitalWrite(AUXout, HIGH);
+   }
+   
+  else
+   {
+     digitalWrite(AUXout, LOW);
+   }
+   
+} 
